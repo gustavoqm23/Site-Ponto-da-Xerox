@@ -1,0 +1,114 @@
+// HEADER (Menu)
+
+.header-content {
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $preto-px;
+    position: fixed;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
+.logo {
+    width: 110px;
+    height: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    h3{
+        color: $branco-px;
+        font-size: 1.6rem;
+        display: block;
+        white-space: nowrap;
+        
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.header-content .list-menu{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content .list-menu li a {
+    padding: 3rem 1rem 2rem 1rem;
+    color: $branco-px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 200ms ease-in;
+}
+
+.header-content .list-menu li a:hover{
+    background-color: $preto-px;
+    border-bottom: 4px solid $laranja-px;
+    color: $laranja-px;
+}
+
+
+/*
+.first-section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+*/
+
+
+
+
+
+/*
+.header-content {
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $preto-px;
+    position: fixed;
+    padding-left: 30rem;
+}
+
+.logo{
+    width: 70px;
+    height: auto;
+    margin-top: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    img{
+        width: 100%;
+        height: 100%;     
+    }
+
+    h3{
+        color: $branco-px;
+        font-size: 1.6rem;    
+    }
+}
+
+
+.header-content .list-menu{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+*/
