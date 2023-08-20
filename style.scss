@@ -11,7 +11,11 @@
 
 //Importando o arquivo _colors.scss (que contém as variáveis das cores do projeto)
 @import "partials/colors";
+
+//Importando o arquivo _layout.scss (que contém o layout do site)
 @import "partials/layout";
+
+//Importando o arquivo _header.scss (que contém o header do site)
 @import "partials/header";
 
 html {

@@ -1,8 +1,13 @@
 
 
-
+//----------------------------------
 // HERO
 
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
 
 .hero{
     color: $branco-px;
@@ -28,9 +33,6 @@
     }
 }
 
-
-
-
 .button-contact{
     padding: 14px 28px;
     color: $branco-px;
@@ -41,9 +43,43 @@
     margin: 14px 0;
 }
 
+.button-contact:hover{
+    animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.03);
+    }
+}
+
+@media screen and (max-width: 400px){
+    .hero{
+        min-height: 70vh;
+
+        h1{
+            font-size: 24px;
+            padding: 0 14px;
+            width: 100%;
+            align-items: center;
+        }
+
+        p{
+            font-size: 14px;
+        }
+
+        a{
+            font-size: 12px;
+        }
+    }
+
+    
+}
 
 /*
-
 .hero{
     height: 100vh;
     width: 100vw;
@@ -80,7 +116,257 @@
 
 */
 
-
-
 //----------------------------------
+// ABOUT
+
+#about3j{
+    width: 65%;
+    min-width: 300px;
+}
+
+.about{
+    background-color: #000000;
+    overflow: hidden;
+    color: $branco-px;
+}
+
+.about-content{
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 34px 34px 64px 14px;
+
+    img{
+        max-width: 570px;
+    
+    }
+}
+
+.about-content div{
+    flex: 1;
+}
+
+.about-description {
+    h2{
+        font-size: 38px;
+        margin-bottom: 24px;
+    }
+
+    p{
+        font-size: 16px;
+        margin-bottom: 14px;
+        line-height: 150%;
+    }
+}
+
+@media screen and (max-width: 960px){
+    .about-content{
+        flex-direction: column;
+    }
+
+    
+
+}
+
+//-----------------------------------------
+// SERVICES
+
+.services{
+    background-color: $branco-px;
+    color: $preto-px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 14px;
+}
+
+.services-content {
+    margin-top: 70px;
+}
+
+.services-content h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+
+.services-content p{
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 14px;
+    text-align: center;
+    max-width: 780px;
+}
+
+.servicos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 0 44px 34px 44px;
+}
+
+.servico {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: $branco-px;
+    border-radius: 8px;
+    box-shadow: 0px -1px 17px -4px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        max-width: 354px;
+        transition: transform 0.2s;
+    }
+    cursor: pointer;
+}
+
+.servico img:hover{
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.servico-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+    background-color: $branco-px;
+    z-index: 9;
+
+    strong{
+        font-size: 15px;
+    }
+}
+
+.servico-info button{
+    color: $branco-px;
+    background-color: $laranja-px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+}
+
+#azu4{
+    height: 223px;
+}
+
+#card4{
+    height: 223px;
+}
+
+@media screen and (max-width: 960px){
+    .servicos{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 54px 14px;
+        gap: 14px;
+    }
+
+    .servico img{
+        min-width: 295px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .servico {
+        width: 250px;
+    }
+}
+
+//SECTION ------------------
+
+
+
+
+
+
+
+
+//FOOTER
+
+
+#venha-conhecer h2{
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 0;
+    gap: 24px;
+    color: $branco-px;
+    background-color: $preto-px;
+
+}
+
+
+.footer p{
+    font-size: 15px;
+}
+
+//Botão Whats App
+.btn-whatsapp{
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 99;
+
+    img{
+        max-width: 74px;
+        transition: transform 0.4s;
+    }
+
+    img:hover{
+        transform: scale(1.1);
+    }
+}
+
+.btn-whatsapp .tooltip-text{
+    font-size: 15px;
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 8px;
+    left: -144px;
+    padding: 6px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: $preto-px;
+    color: $branco-px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.btn-whatsapp:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px){
+    .btn-whatsapp{
+        img{
+            max-width: 64px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .footer p {
+        font-size: 12px;
+    }
+
+}
 

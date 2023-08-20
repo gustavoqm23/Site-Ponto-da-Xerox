@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--Biblioteca de Animações do Site-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!--BOOT STRAP icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
@@ -12,13 +15,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+    <!-- Script da Biblioteca-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- Conexão do HTML com o CSS-->
     <link rel="stylesheet" href="style.css">
     <title>Ponto da Xerox</title>
 </head>
 <body>
     <!--HEADER -->
-    <header class="header-content">
+    <header class="header-content" data-aos="fade-down">
         <div class="logo">
             <img src="img/px-logo.PNG" alt="logo do site">
             <h3>Ponto da Xerox</h3>
@@ -26,16 +32,22 @@
 
         <!--Menu com barra de navegação-->
         <nav>
-            <ul class="list-menu">
-                <li> <a href="#">Home</a> </li>
-                <li> <a href="#">Sobre nós</a> </li>
-                <li> <a href="#">Serviços</a> </li>
-                <li> <a href="#">Contatos</a> </li>
-                <li> <a href="#"> <i class="bi bi-instagram"></i> </a> </li>
-                <li> <a href="#"> <i class="bi bi-whatsapp"></i></a> </li>
-                <li> <a href="#"> <i class="bi bi-cart2"></i></a> </li>
+            <ul class="list-menu" data-aos="fade-down">
+                <li> <a id="linkHome" href="#">Home</a> </li>
+                <li> <a id="linkAbout" href="#">Sobre nós</a> </li>
+                <li> <a id="linkServicos" href="#">Serviços</a> </li>
+                <li> <a id="linkLocalizacao" href="#">Localização</a> </li>
+                <li> <a href="https://www.instagram.com/pontodaxeroxcarlito/" target="_blank"> <i class="bi bi-instagram"></i> </a> </li>
+                <li> <a href="https://api.whatsapp.com/send?phone=5585996123245&text=Quero%20fazer%20um%20pedido!" target="_blank"> <i class="bi bi-whatsapp"></i></a> </li>
+            <!----   <li> <a href="#"> <i class="bi bi-cart2"></i></a> </li>    --> 
             </ul>
         </nav>
+
+        <div class="menu-toggle">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
     </header>
 
     <!-- 
@@ -52,24 +64,128 @@
             </div>
         </div>
     </section>
-
     -->
-
-
     
-   <main class="hero container">
+
+    <!-- HERO -->
+   <main class="hero container" id="home-link">
         <h1>A qualidade que faz a diferença. Produtos gráficos feitos com excelência para você.</h1>
         <p>Horário de funcionamento: 8h às 17h</p>
 
-        <a href="#" class="button-contact" target="_blank">
+        <a href="https://api.whatsapp.com/send?phone=5585996123245&text=Quero%20fazer%20um%20pedido!" class="button-contact" target="_blank">
             Pedir produto personalizado
         </a>
     </main>
 
+    <!-- ABOUT -->
+    <section class="about" id="about-link"> 
+        <div class="container about-content">
+            <div data-aos="zoom-in" data-aos-delay="120">
+                <img src="./img/about3.png" 
+                alt="Imagem sobre a loja" id="about3j"/>
+            </div>
 
+            <div class="about-description" data-aos="zoom-out-left" data-aos-delay="120">
+                <h2>Sobre nós</h2>
+                <p>Somos uma gráfica que atua no mercado desde 2004, no bairro Carlito Pamplona. Vendemos azulejos e canecas personalizadas, cartões de visita, fazemos fotos 3x4, xerox, currículos, agendamento de RG, FGTS, INSS, MEI e muito mais!</p>
+                <p>Horário de funcionamento: <strong>08:00</strong> às <strong>17:00</strong></p>
+                
+            </div>
+        </div>
+    </section>
 
-
+    <!-- SERVICES -->
     
+    <section class="services" id="servicos-link">
+        <div class="services-content container">
+            <h2>Serviços</h2>
+            <p>Nós personalizamos canecas, azulejos, cartões de visita, tiramos fotos 3x4, xerox, currículos, agendamento de RG, FGTS, INSS, MEI e muito mais! </p>  
+        </div>
+
+        <section class="servicos">
+            <div class="servico" id="caneca-link" data-aos="fade-up" data-aos-delay="150">
+                
+                <img src="./img/caneca_personalizada.PNG"
+                alt="Caneca Personalizada"/>
+
+                <div class="servico-info">
+                    <strong>Caneca Personalizada</strong>
+                    <button>
+                        R$34,90
+                    </button>
+                </div>
+            </div>
+
+            <div class="servico" id="azulejo-link" data-aos="fade-up" data-aos-delay="250">
+                <img src="./img/azulejo4.PNG" id="azu4" 
+                alt="Azulejo Personalizado"/>
+
+                <div class="servico-info">
+                    <strong>Azulejo Personalizado</strong>
+                    <button>
+                        R$39,99
+                    </button>
+                </div>
+            </div>
+
+            <div class="servico" id="cartoes-link" data-aos="fade-up" data-aos-delay="400">
+                <img src="./img/cartoes-visita4.jpg" id="card4" 
+                alt="Cartões de Visita"/>
+
+                <div class="servico-info">
+                    <strong>Cartões de Visita</strong>
+                    <button>
+                        R$ Depende
+                    </button>
+                </div>
+            </div>
+
+        </section>    
+    </section>
+
+    <!--FOOTER-->
+    <section class="englobar" id="englobar"> 
+        <div class="services" id="venha-conhecer">
+            <h2>Venha Conhecer</h2>
+        </div>
+
+        <iframe 
+        width="100%" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d703.8237411461278!2d-38.55911128391963!3d-3.7163633439041597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c749f2add4e741%3A0xa991df8f5d7f73fc!2sPonto%20da%20Xerox%20-%20Artes%20e%20Presentes!5e0!3m2!1spt-BR!2sbr!4v1691002991026!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     
+    </section>
+   <footer class="footer">
+        <div>
+            <img src="./img/px-logo.PNG"
+            alt = logo-px/>
+        </div>
+
+        <p>Copyright 2023 | PX Soluções - Todos os direitos reservados.</p>
+   </footer>
+
+   <!--Button WhatsApp-->
+
+   <a 
+    href="https://api.whatsapp.com/send?phone=5585996123245&text=Quero%20fazer%20um%20pedido!"
+    class="btn-whatsapp"
+    target="_blank"
+    data-aos="zoom-in-up" data-aos-delay="400";
+    >
+        <img src="./img/whatssapp.svg" alt="botao whats app"/>
+        <span class="tooltip-text">Saiba mais</span>
+    </a>
+
+   
+
+       
+
+
+        
+
+
+
+
+    <!-- Conexão do arquivo JavaScript com o HTML-->
+    <script src="./script.js"></script>
 </body>
 </html>

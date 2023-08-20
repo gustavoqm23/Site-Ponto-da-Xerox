@@ -10,6 +10,7 @@
     position: fixed;
     padding-left: 7rem;
     padding-right: 7rem;
+    z-index: 1000;
 }
 
 .logo {
@@ -21,7 +22,7 @@
 
     h3{
         color: $branco-px;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         display: block;
         white-space: nowrap;
         
@@ -55,6 +56,137 @@
     color: $laranja-px;
 }
 
+
+// -------------------------
+//RESPONSIVIDADE
+
+@media(max-width: 1150px) {
+    .header-content{
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 95px;
+        position: fixed;
+        padding-left: 7rem;
+        padding-right: 7rem;
+        padding-top: 0.2rem;
+        padding-bottom: 4px;
+        z-index: 1000;
+    }
+}
+
+@media(max-width: 768px){
+    .header-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 40px;
+    }
+
+    .header-content .list-menu li a:hover{
+        background-color: transparent;
+        border-bottom: 4px solid $laranja-px;
+        color: $laranja-px;
+    }
+
+    .header-content h3{
+        font-size: 1.8rem;
+    }
+
+
+    .header-content .list-menu{
+        display: none;
+    }
+
+    
+    
+
+
+    .one, .two, .three {
+        width: 80%;
+        height: 2px;
+        background-color: $branco-px;
+        margin: 6px auto;
+        transition-duration: 0.5s;
+    }
+
+    .menu-toggle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .header-content.on{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(30, 31, 30, 0.8);
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-content.on .logo{
+        display: none;
+    }
+
+    .header-content.on .menu-toggle{
+        position: absolute;
+        right: 40px;
+        top: 20px;
+    }
+
+    .header-content.on .list-menu{
+        display: block;
+    }
+
+    .header-content.on .list-menu li{
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-content.on .list-menu li a{
+        font-size: 2rem;
+    }
+
+    .header-content.on .menu-toggle .two{
+        opacity: 0;
+    }
+
+    .header-content.on .menu-toggle .one {
+        transform: rotate(45deg) translate(5px, -8px);
+    }
+
+    .header-content.on .menu-toggle .three{
+        transform: rotate(-45deg) translate(20px, -6px);
+    }
+}
+
+@media(max-width: 375px){
+    .header-content .list-menu li a:hover{
+        background-color: transparent;
+        border-bottom: 4px solid $laranja-px;
+        color: $laranja-px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//------------------------------------------
 
 /*
 .first-section {
